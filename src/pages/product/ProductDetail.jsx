@@ -25,7 +25,7 @@ const ProductDetail = () => {
   );
 
   return (
-    <div className="container">
+    <div className="container my-5">
       <h3 className="my-4">Product Detail</h3>
 
       <div className="card mb-3">

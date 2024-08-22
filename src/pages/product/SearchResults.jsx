@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faHeart, faHouseChimneyUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faHeart,
+  faHouseChimneyUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
 
 const SearchResults = () => {
@@ -13,7 +17,7 @@ const SearchResults = () => {
     useContext(CartContext);
 
   return (
-    <div className="container">
+    <div className="container my-5">
       <h3 className="my-4">
         Search Results for "{searchQuery}"{" "}
         <button

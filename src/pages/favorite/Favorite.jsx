@@ -11,7 +11,7 @@ const Favorite = () => {
   const { favoriteIds } = useContext(CartContext);
   const navigate = useNavigate();
   return (
-    <div className="container">
+    <div className="container my-5">
       <div className="products-title">
         <h2 className="my-3 py-3">
           Favorite Items
