@@ -13,7 +13,7 @@ const Product = (props) => {
   const favoriteId = favoriteIds.find((fid) => fid === id);
 
   return (
-    <div className="product-card" style={{ width: "18rem" }}>
+    <div className="product-card">
       <div className="img-box">
         <img
           src={productImage}
