@@ -34,7 +34,7 @@ const Product = (props) => {
           onClick={() => addToCart(id)}
         >
           <FontAwesomeIcon icon={faCartShopping} />
-          Add To Cart
+          {/* Add To Cart */}
           <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             {cartItem?.count}
           </span>

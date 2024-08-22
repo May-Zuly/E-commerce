@@ -13,7 +13,7 @@ const FavoriteItem = (props) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
       <img src={productImage} className="card-img-top" alt={productName} />
-      <div className="card-body">
+      <div className="card-body text-center">
         <h5 className="card-title">{productName}</h5>
         <p className="card-text">${price}</p>
         <button

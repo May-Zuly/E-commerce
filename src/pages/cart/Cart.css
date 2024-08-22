@@ -1,0 +1,28 @@
+.cart-list-container {
+    position: relative;
+  }
+  
+  .cart-list {
+    flex: 1; /* Take up the remaining space */
+  }
+  
+  .cart-info {
+    position: fixed;
+    top: 10rem; /* Adjust the top value as needed */
+    right: 5rem; /* Adjust the right value based on your layout */
+    width: 300px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-info h5 {
+    margin-bottom: 20px;
+  }
+  
+  .cart-info .btn {
+    width: 100%;
+  }
+  

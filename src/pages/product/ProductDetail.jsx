@@ -1,12 +1,19 @@
 import React, { useContext } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { PRODUCTS } from "../../products";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBackward,
+  faCartShopping,
+  faCircleLeft,
+  faHeart,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ProductDetail = () => {
   const params = useParams();
+  const navigate = useNavigate();
+  
   const product = PRODUCTS.find((product) => product.id === Number(params.id));
   const { id, productName, productImage, price, description } = product;
   const { cartItems, addToCart, favoriteIds, toggleFavorite } =
@@ -48,12 +55,20 @@ const ProductDetail = () => {
               <button
                 type="button"
                 className={
-                  "btn btn-outline-primary position-relative " +
+                  "btn btn-outline-primary position-relative mx-2 " +
                   (favoriteId && "text-danger")
                 }
                 onClick={() => toggleFavorite(id)}
               >
                 <FontAwesomeIcon icon={faHeart} />
+              </button>
+              <button
+                type="button"
+                className={"btn btn-outline-primary position-relative ms-2"}
+                onClick={() => navigate("/")}
+              >
+                <FontAwesomeIcon icon={faCircleLeft} className="me-2" />
+                Back
               </button>
             </div>
           </div>

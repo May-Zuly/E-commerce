@@ -11,8 +11,10 @@ import Cart from "./pages/cart/Cart";
 import { CartContextProvider } from './context/CartContext';
 import  Favorite  from './pages/favorite/Favorite';
 import  ProductDetail  from './pages/product/ProductDetail'; 
-
 import "./App.css";
+import Footer from "./components/Footer";
+import SearchResults from "./pages/product/SearchResults";
+
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
             <Route path='/product/:id' element={<ProductDetail/>} />
             <Route path="/cart" element={<Cart />} />
             <Route path='/favorite' element={<Favorite/>} />
+            <Route path="/search" element={<SearchResults/>}/>
           </Routes>
+          <Footer/>
         </Router>
       </CartContextProvider>
     </div>
